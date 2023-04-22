@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build/main.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/sunnyyao666/PycharmProjects/synthetic-data-showcase-main/target/release/build/typenum-e8e5325ab964dda3/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/Users/sunnyyao666/PycharmProjects/synthetic-data-showcase-main/target/release/build/typenum-e8e5325ab964dda3/out/op.rs
