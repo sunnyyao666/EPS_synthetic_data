@@ -76,7 +76,7 @@ maturin develop --release
 
 #### Install the dependencies
 
-Go back to the backend folder, and install all the required python dependencies.
+Go back to the `backend` folder, and install all the required python dependencies.
 
 ```bash
 cd ../../
@@ -84,7 +84,7 @@ pip install -r packages/pythonpipline/requirements.txt
 ```
 
 #### Run the server
-Make sure yor are in the backend folder, and run the following command:
+Make sure yor are in the `backend` folder, and run the following command:
 ```bash
 venv/bin/python3 manage.py runserver
 ```
