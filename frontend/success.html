@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Success</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: space-between;
+      height: 100vh;
+    }
+    .content, .image-container {
+      width: 50%;
+      overflow: auto;
+    }
+    iframe {
+      width: 50%;
+      height: 100%;
+      border: none;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .download-button {
+      display: block;
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <iframe src="/results.txt"></iframe>
+  <div class="image-container">
+    <img src="/example-image.jpg" alt="Example image">
+    <a href="/results.txt" download="results.txt" class="download-button">Download Results</a>
+  </div>
+</body>
+</html>

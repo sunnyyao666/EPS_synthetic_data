@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload</title>
+  <style>
+    #submitButton {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Synthetic Data Generation</h1>
+  <h2>File Upload</h2>
+  <input type="file" id="fileInput">
+  <button id="submitButton">Submit File</button>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const submitButton = document.getElementById('submitButton');
+
+    submitButton.style.display = 'block';
+    fileInput.addEventListener('change', (event) => { alert('hey');
+      if (event.target.files.length > 0) {
+	  alert('worked!');
+        submitButton.style.display = 'block';
+      } else {
+	  alert('didnt work!');
+        submitButton.style.display = 'none';
+      }
+    });
+
+    submitButton.addEventListener('click', () => {
+      const file = fileInput.files[0];
+      if (!file) {
+        alert('Please select a file to upload.');
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('file', file);
+
+      fetch('/upload', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = 'success.html';
+        } else {
+          alert('File upload failed.');
+        }
+      })
+      .catch(() => {
+        alert('An error occurred while uploading the file.');
+      });
+    });
+  </script>
+</body>
+</html>
