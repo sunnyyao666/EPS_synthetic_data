@@ -11,13 +11,8 @@
       height: 100vh;
     }
     .content, .image-container {
-      width: 50%;
+      width: 100%;
       overflow: auto;
-    }
-    iframe {
-      width: 50%;
-      height: 100%;
-      border: none;
     }
     img {
       width: 100%;
@@ -35,11 +30,17 @@
     }
   </style>
 </head>
-<body>
-  <iframe src="/results.txt"></iframe>
-  <div class="image-container">
-    <img src="/example-image.jpg" alt="Example image">
+<body style="background-color:#FFEBCD;">
+<div>
+ <h1>Results</h1>
+<iframe src="result_header.txt" align="left" width="49%" height="30"></iframe>
+<iframe src="aggregated_header.txt" align="right" width="50%" height="30"></iframe>
+  <iframe src="yelp_synthetic_microdata.tsv" align="left" width="49%" height="50%"></iframe>
+  <iframe src="yelp_reportable_aggregates.tsv" align="right" width="50%" height="50%"></iframe>
+  <div class="image-container" align="bottom">
+    <img src="yelp_sensitive_rare_by_length.svg" alt="Example image">
     <a href="/results.txt" download="results.txt" class="download-button">Download Results</a>
+  </div>
   </div>
 </body>
 </html>
