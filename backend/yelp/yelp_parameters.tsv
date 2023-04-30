@@ -1,0 +1,8 @@
+parameter	value
+resolution	2
+limit	5
+total_sensitive_records	1022
+unique_identifiable	822
+rare_identifiable	0
+risky_identifiable	822
+risky_identifiable_pct	80.43052837573386
